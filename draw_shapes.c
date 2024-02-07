@@ -28,7 +28,7 @@ void print_triangle(int leftCol, int size)
 void print_arrow(int triCol, int trisize, int sqcol, int sqsize){
   void print_arrow(int triCol, int trisize)
   {
-    for (int row 0 ; row <= trisize; row++){
+    for (int row = 0 ; row <= trisize; row++){
       int minCol = triCol + trisize - row, maxCol = triCol + trisize + row;
       int minCol = triCol + trisize - row;
       int maxCol = triCol + trisize + row; 
