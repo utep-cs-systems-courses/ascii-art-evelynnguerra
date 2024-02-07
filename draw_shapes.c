@@ -25,14 +25,22 @@ void print_triangle(int leftCol, int size)
     putchar('\n');
   }
 }
-  void print_arrow(int leftCol, int size)
+void print_arrow(int triCol, int trisize, int sqcol, int sqsize){
+  void print_arrow(int triCol, int trisize)
   {
-    for (int row 0 ; row <= size; row++){
-      int minCol = leftCol + size - row, maxCol = leftCol + size +row;
+    for (int row 0 ; row <= trisize; row++){
+      int minCol = triCol + trisize - row, maxCol = triCol + trisize + row;
+      int minCol = triCol + trisize - row;
+      int maxCol = triCol + trisize + row; 
       int col;
       for (col = 0; col < minCol; col++) putchar(' ');
+      for (col = 0; col < minCol; col++)
       for(        ; col <= maxCol; col++) putchar('*');
+      putchar(' ' );
+      for(        ; col <= maxCol; col++)
+	putchar('*');
       putchar('\n');
+    }
   }
 }
 
