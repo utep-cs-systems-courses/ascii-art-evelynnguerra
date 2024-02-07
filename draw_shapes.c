@@ -41,6 +41,24 @@ void print_arrow(int triCol, int trisize, int sqcol, int sqsize){
 	putchar('*');
       putchar('\n');
     }
+    int x,y;
+    int endofCol = sqcol + sqsize;
+  }
+  for (int row = 0; row < sqsize; row++){
+    int sqcol = triCol +(trisize / 2) +1;
+    int sqsize = trisize;
+    for (int row = 0; row < sqsize; row++){
+      int col;
+      for (col = 0; col< sqcol; col++)
+	putchar(' ');
+      for (col = 0; col < sqcol; coll++)
+	for (    ; col < endofCol; col++)
+	  putchar('*');
+      putchar(' ');
+      for(     ; col < sqcol + sqsize: col++)
+	putchar(' ');
+      putchar('\n');
+    }
   }
 }
 
