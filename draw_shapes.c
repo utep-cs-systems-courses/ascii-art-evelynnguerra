@@ -37,7 +37,7 @@ void print_arrow(int triCol, int trisize)
       for(        ; col <= maxCol; col++)
 	putchar('*');
         putchar('\n');
-   
+  }
     int sqcol = triCol + (trisize / 2) +1;
     int sqsize = trisize;
     for (int row = 0; row < sqsize; row++){
@@ -45,7 +45,7 @@ void print_arrow(int triCol, int trisize)
       for (col = 0; col < sqcol; col++)
           putchar(' ');
       for(     ; col < sqcol + sqsize; col++)
-	putchar(' ');
+	putchar('*');
         putchar('\n');
     }
 }
