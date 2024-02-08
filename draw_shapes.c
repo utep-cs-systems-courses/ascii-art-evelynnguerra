@@ -27,26 +27,31 @@ void print_triangle(int leftCol, int size)
 }
 //printing arrow with the triangle and square
 void print_arrow(int triCol, int trisize)
-  {
+{//looping through the triangle
     for (int row = 0 ; row <= trisize; row++){
-      int minCol = triCol + trisize - row;
-      int maxCol = triCol + trisize + row; 
+      int minCol = triCol + trisize - row;//calculating the minimum column index for the triangle
+      int maxCol = triCol + trisize + row;// calculating the maximum column index for the triangle
       int col;
+      //looping the print spaces before the triangle
       for (col = 0; col < minCol; col++)
         putchar(' ');
+      //loop to print the triangle
       for(        ; col <= maxCol; col++)
 	putchar('*');
-        putchar('\n');
-  }
-    int sqcol = triCol + (trisize / 2) +1;
-    int sqsize = trisize;
+      putchar('\n');// move to the next line after printing a row 
+    }//variables for the square
+    int sqcol = triCol + (trisize / 2) +1;//column index for the square
+    int sqsize = trisize; //size of square
+    //loop for printing the triangle
     for (int row = 0; row < sqsize; row++){
       int col;
+      ///loop to print spaces before the square
       for (col = 0; col < sqcol; col++)
           putchar(' ');
+      //loop for printing the square
       for(     ; col < sqcol + sqsize; col++)
 	putchar('*');
-        putchar('\n');
+      putchar('\n');//move to the next line after printing a row
     }
 }
 
